@@ -4,7 +4,8 @@ sudo: false
 r: release
 
 
-# Use newer version of PhantomJS than is installed by default on basic R image.
+# Cache R packages and use newer version of PhantomJS than is installed by
+# default on basic R image.
 cache:
   packages: true
   directories:
