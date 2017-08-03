@@ -29,4 +29,4 @@ before_install:
   - "phantomjs --version"
 
 script:
-  - Rscript run_tests.R
+  - R run_tests.R
