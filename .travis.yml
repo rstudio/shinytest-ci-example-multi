@@ -6,6 +6,7 @@ r: release     # Use current release version of R (like 3.4.1)
 install:
   - R -e 'if (system.file(package="packrat") == "") install.packages("packrat")'
   - R -e 'file.copy(system.file("resources/init.R", package="packrat"), "./packrat/init.R"); file.copy(system.file("resources/init-rprofile.R", package="packrat"), "./.Rprofile")'
+  - R -e "TRUE" --args --bootstrap-packrat
 
 # Cache R packages and use newer version of PhantomJS than is installed by
 # default on basic R image.
@@ -29,4 +30,4 @@ before_install:
   - "phantomjs --version"
 
 script:
-  - R run_tests.R
+  - R -f run_tests.R
