@@ -6,8 +6,7 @@ r: release     # Use current release version of R (like 3.4.1)
 # Install packrat if needed and have it restore packages.
 install:
   - R -e 'if (system.file(package="packrat") == "") install.packages("packrat")'
-  - R -e 'file.copy(system.file("resources/init.R", package="packrat"), "./packrat/init.R"); file.copy(system.file("resources/init-rprofile.R", package="packrat"), "./.Rprofile")'
-  - R -e "TRUE" --args --bootstrap-packrat
+  - R -e "packrat::packify() && packrat::restore()"
 
 cache:
   # Main R library
