@@ -55,10 +55,14 @@ Hash: eeba9fb36d4cb6cc66f060187102be41
 Requires: Rcpp, digest
 
 Package: htmlwidgets
-Source: CRAN
+Source: github
 Version: 0.9
-Hash: 7514f6ea9f3bef6d9b6c945095275302
-Requires: jsonlite, yaml, htmltools
+Hash: 68ef9fe30c404ff2d588c9d83c5b668b
+Requires: htmltools, jsonlite, yaml
+GithubRepo: htmlwidgets
+GithubUsername: ramnathv
+GithubRef: master
+GithubSha1: 6f4101d0509f6c3cf13ad151bddf7298ee722bdd
 
 Package: httpuv
 Source: CRAN
@@ -133,19 +137,23 @@ Version: 1.0.1
 Hash: ad4faf59e7611117ff165817074c50c7
 
 Package: shiny
-Source: CRAN
-Version: 1.0.3
-Hash: 34f2cbc26928522243f5cb15069cfe2c
-Requires: R6, digest, jsonlite, mime, sourcetools, xtable, httpuv,
-    htmltools
+Source: github
+Version: 1.0.3.9002
+Hash: 53ffa8a548c3c43a3cead240b2622217
+Requires: R6, digest, htmltools, httpuv, jsonlite, mime, sourcetools,
+    xtable
+GithubRepo: shiny
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: ba5c5ef4fbaea412fac6bfd055df9d750b5f8077
 
 Package: shinytest
 Source: github
 Version: 1.1.1
 Hash: df2aa02abcdb51c33da524f72f97061f
-Requires: R6, assertthat, crayon, digest, jsonlite, parsedate, pingr,
-    rematch, withr, debugme, httr, testthat, processx, htmlwidgets,
-    shiny, webdriver
+Requires: R6, assertthat, crayon, debugme, digest, htmlwidgets, httr,
+    jsonlite, parsedate, pingr, processx, rematch, shiny, testthat,
+    webdriver, withr
 GithubRepo: shinytest
 GithubUsername: rstudio
 GithubRef: master
@@ -176,8 +184,8 @@ Package: webdriver
 Source: github
 Version: 1.0.2.9002
 Hash: 0fc511784de26345add1defa6adbbc49
-Requires: R6, base64enc, curl, jsonlite, debugme, httr, showimage,
-    processx
+Requires: R6, base64enc, curl, debugme, httr, jsonlite, processx,
+    showimage
 GithubRepo: webdriver
 GithubUsername: rstudio
 GithubRef: master
