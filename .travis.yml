@@ -1,12 +1,17 @@
-dist: trusty
+dist: trusty   # Use Ubuntu 14.04 image (instead of 12.04)
 language: r
 sudo: false
-r: release
+r: release     # Use current release version of R (like 3.4.1)
 
+install:
+  - R -e "0" --args --bootstrap-packrat
 
 # Cache R packages and use newer version of PhantomJS than is installed by
 # default on basic R image.
 cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/packrat/src
+    - $TRAVIS_BUILD_DIR/packrat/lib
   packages: true
   directories:
     - "travis_phantomjs"
