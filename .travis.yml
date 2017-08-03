@@ -5,6 +5,7 @@ r: release     # Use current release version of R (like 3.4.1)
 
 install:
   - R -e "0" --args --bootstrap-packrat
+  - R -e "packrat::restore(restart = FALSE)"
 
 # Cache R packages and use newer version of PhantomJS than is installed by
 # default on basic R image.
